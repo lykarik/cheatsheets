@@ -8,6 +8,6 @@ IdentityFile ~/.ssh/id_rsa_buhlServer
 
 Host *
     ForwardAgent yes
-    AddKeysToAgent yes
+    AddKeysToAgent yes # deliver key to remote server, not secure, maybe you should disable it
     IdentityFile ~/.ssh/id_ecdsa
     IdentityFile ~/.ssh/id_rsa

@@ -7,7 +7,7 @@ IdentityFile ~/.ssh/id_rsa_buhlServer
 # or
 
 Host *
-    ForwardAgent yes
-    AddKeysToAgent yes # deliver key to remote server, not secure, maybe you should disable it
+    ForwardAgent yes # deliver key to remote server, not secure, maybe you should disable it
+    AddKeysToAgent yes 
     IdentityFile ~/.ssh/id_ecdsa
     IdentityFile ~/.ssh/id_rsa

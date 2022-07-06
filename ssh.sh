@@ -2,3 +2,12 @@
 
 IdentityFile ~/.ssh/gitHubKey
 IdentityFile ~/.ssh/id_rsa_buhlServer
+
+
+# or
+
+Host *
+    ForwardAgent yes
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_ecdsa
+    IdentityFile ~/.ssh/id_rsa

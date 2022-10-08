@@ -9,3 +9,6 @@ keytool -import -trustcacerts -alias <alias-name> -file result-file.crt -keystor
 
 # Check cert existing
 keytool -list -keystore /etc/pki/java/cacerts | grep <alias-name>
+
+# Delete cert from system keystore
+keytool -delete -alias comodo_domain_ca -keystore /etc/pki/java/cacerts

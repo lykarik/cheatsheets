@@ -15,6 +15,6 @@ alias ssh_init='eval $(ssh-agent -s) && ssh-add ~/.ssh/lykarik_github_vm ~/.ssh/
 alias forti='sudo openfortivpn -c /etc/openfortivpn/config --no-dns'
 #func for check info about another IP (have troubles with $1, need fix)
 function ipa {
-	curl -s 'https://ifconfig.co/json?ip=$1' | jq 'del(.user_agent)'
+	curl -s 'https://ifconfig.co/json?ip='"$1"'' | jq 'del(.user_agent)'
 }
 

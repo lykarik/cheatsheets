@@ -1,0 +1,18 @@
+# The problem is slow apps start
+# apps affected - telegram-desktop, vivaldi-stable, keepass
+
+# resolving in xdg-desktop-portal-gnome
+# in my system was installed both of xdg-desktop-portal-gtk and xdg-desktop-portal-gnome
+
+# because wm is i3wm - doing next steps
+
+# remove gnome portal from system
+$> sudo pacman -Rdd xdg-desktop-portal-gnome
+
+# install\reinstall gtk portal
+$> sudo pacman -S xdg-desktop-portal-gtk
+
+# then edit file in /usr/share/xdg-desktop-portal/portals/gtk.portal
+UseIn=gnome -> replace to UseIn=i3
+
+# reboot or relogin to the system

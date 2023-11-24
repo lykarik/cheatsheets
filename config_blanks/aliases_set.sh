@@ -11,7 +11,7 @@ alias dusage='du -ah --max-depth=1 $(pwd) | sort -rh | head -n 10'
 alias myip='curl ifconfig.co'
 
 #load bulk ssh keys
-alias ssh_init='eval $(ssh-agent -s) && ssh-add ~/.ssh/lykarik_github_vm ~/.ssh/hcs_gitlab_vm ~/.ssh/ssh_lanit'
+alias ssh_init='eval $(ssh-agent -s) && ssh-add <keys>'
 alias forti='sudo openfortivpn -c /etc/openfortivpn/config --no-dns'
 #func for check info about another IP (have troubles with $1, need fix)
 function ipa {

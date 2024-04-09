@@ -18,3 +18,7 @@ useradd -d /var/lib/jenkins jenkins
 # Create and deliver ssh keys for slave from master
 ssh-keygen -t rsa -b 2096 -f <ssh_file_name>
 ssh-copy-id -i <ssh_file_name>.pub jenkins@<host>
+
+
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
